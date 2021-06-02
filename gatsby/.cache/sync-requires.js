@@ -6,8 +6,6 @@ const preferDefault = m => (m && m.default) || m
 exports.components = {
   "component---cache-dev-404-page-js": preferDefault(require("/Users/luisbenitez/Documents/2021/01-Web/Jumpcut/gatsby/.cache/dev-404-page.js")),
   "component---src-pages-404-js": preferDefault(require("/Users/luisbenitez/Documents/2021/01-Web/Jumpcut/gatsby/src/pages/404.js")),
-  "component---src-pages-index-js": preferDefault(require("/Users/luisbenitez/Documents/2021/01-Web/Jumpcut/gatsby/src/pages/index.js")),
-  "component---src-pages-page-2-js": preferDefault(require("/Users/luisbenitez/Documents/2021/01-Web/Jumpcut/gatsby/src/pages/page-2.js")),
-  "component---src-pages-using-typescript-tsx": preferDefault(require("/Users/luisbenitez/Documents/2021/01-Web/Jumpcut/gatsby/src/pages/using-typescript.tsx"))
+  "component---src-pages-index-js": preferDefault(require("/Users/luisbenitez/Documents/2021/01-Web/Jumpcut/gatsby/src/pages/index.js"))
 }
 

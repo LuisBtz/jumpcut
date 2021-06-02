@@ -33,11 +33,13 @@ module.exports = {
       },
     },
     {
-      resolve: "gatsby-source-strapi",
+      resolve: `gatsby-source-sanity`,
       options: {
-        apiURL: process.env.API_URL || "http://localhost:1337",
-        singleTypes: [`home-page`],
-        queryLimit: 1000,
+        projectId: `kb34q46e`,
+        dataset: `production`,
+        // a token with read permissions is required
+        // if you have a private dataset
+        token: process.env.SANITY_TOKEN,
       },
     },
   ],

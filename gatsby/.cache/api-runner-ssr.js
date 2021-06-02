@@ -10,6 +10,10 @@ var plugins = [{
       name: 'gatsby-plugin-manifest',
       plugin: require('/Users/luisbenitez/Documents/2021/01-Web/Jumpcut/gatsby/node_modules/gatsby-plugin-manifest/gatsby-ssr'),
       options: {"plugins":[],"name":"gatsby-starter-default","short_name":"starter","start_url":"/","background_color":"#663399","theme_color":"#663399","display":"minimal-ui","icon":"src/assets/images/gatsby-icon.png","legacy":true,"theme_color_in_head":true,"cache_busting_mode":"query","crossOrigin":"anonymous","include_favicon":true,"cacheDigest":"4a9773549091c227cd2eb82ccd9c5e3a"},
+    },{
+      name: 'gatsby-source-sanity',
+      plugin: require('/Users/luisbenitez/Documents/2021/01-Web/Jumpcut/gatsby/node_modules/gatsby-source-sanity/gatsby-ssr'),
+      options: {"plugins":[],"projectId":"kb34q46e","dataset":"production","token":"skEGopcg490xLbtBCmC9LAsf4zPJ42utCQGW34TTBs0bS0DDrSws4E7RaFODDxmLqbAAe4ZeuzVahhDkm23Ep6ut2V5ikIWyMUKg5gK0d9H617wGrYfhhRO3PfDU5PWrXc1ZNf0lmz0PL6wv178x0hkJ0D3ilXT6KG3BOTwprhgZ4eZ6nyEN"},
     }]
 // During bootstrap, we write requires at top of this file which looks like:
 // var plugins = [

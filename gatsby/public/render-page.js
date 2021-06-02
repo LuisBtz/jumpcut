@@ -3096,6 +3096,15 @@ var plugins = [{
     "include_favicon": true,
     "cacheDigest": "4a9773549091c227cd2eb82ccd9c5e3a"
   }
+}, {
+  name: 'gatsby-source-sanity',
+  plugin: __webpack_require__(/*! ./node_modules/gatsby-source-sanity/gatsby-ssr */ "./node_modules/gatsby-source-sanity/gatsby-ssr.js"),
+  options: {
+    "plugins": [],
+    "projectId": "kb34q46e",
+    "dataset": "production",
+    "token": "skEGopcg490xLbtBCmC9LAsf4zPJ42utCQGW34TTBs0bS0DDrSws4E7RaFODDxmLqbAAe4ZeuzVahhDkm23Ep6ut2V5ikIWyMUKg5gK0d9H617wGrYfhhRO3PfDU5PWrXc1ZNf0lmz0PL6wv178x0hkJ0D3ilXT6KG3BOTwprhgZ4eZ6nyEN"
+  }
 }]; // During bootstrap, we write requires at top of this file which looks like:
 // var plugins = [
 //   {
@@ -4825,6 +4834,51 @@ var onRenderBody = function onRenderBody(_ref) {
   }
 
   setHeadComponents([helmet.title.toComponent(), helmet.link.toComponent(), helmet.meta.toComponent(), helmet.noscript.toComponent(), helmet.script.toComponent(), helmet.style.toComponent(), helmet.base.toComponent()]);
+};
+
+exports.onRenderBody = onRenderBody;
+
+/***/ }),
+
+/***/ "./node_modules/gatsby-source-sanity/gatsby-ssr.js":
+/*!*********************************************************!*\
+  !*** ./node_modules/gatsby-source-sanity/gatsby-ssr.js ***!
+  \*********************************************************/
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+
+// Proxy to TypeScript-compiled output.
+// Note that unlike gatsby-node.js, we need to explicitly define the exported hooks
+// as they seem to be statically analyzed at build time.
+const ssr = __webpack_require__(/*! ./lib/gatsby-ssr */ "./node_modules/gatsby-source-sanity/lib/gatsby-ssr.js");
+
+exports.onRenderBody = ssr.onRenderBody;
+
+/***/ }),
+
+/***/ "./node_modules/gatsby-source-sanity/lib/gatsby-ssr.js":
+/*!*************************************************************!*\
+  !*** ./node_modules/gatsby-source-sanity/lib/gatsby-ssr.js ***!
+  \*************************************************************/
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", ({
+  value: true
+}));
+exports.onRenderBody = void 0;
+
+const react_1 = __webpack_require__(/*! react */ "react");
+
+const onRenderBody = ({
+  setHeadComponents
+}) => {
+  setHeadComponents([react_1.createElement('link', {
+    rel: 'preconnect',
+    key: 'sanity-cdn-preconnect',
+    href: 'https://cdn.sanity.io'
+  })]);
 };
 
 exports.onRenderBody = onRenderBody;
