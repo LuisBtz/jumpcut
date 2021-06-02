@@ -353,6 +353,7 @@ ul {
 
 a {
     text-decoration: none;
+    color: black;
 }
 
 * {
@@ -363,3 +364,4 @@ img {
   width: 100%;
 }
 `
+

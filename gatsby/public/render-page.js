@@ -3103,7 +3103,8 @@ var plugins = [{
     "plugins": [],
     "projectId": "kb34q46e",
     "dataset": "production",
-    "token": "skEGopcg490xLbtBCmC9LAsf4zPJ42utCQGW34TTBs0bS0DDrSws4E7RaFODDxmLqbAAe4ZeuzVahhDkm23Ep6ut2V5ikIWyMUKg5gK0d9H617wGrYfhhRO3PfDU5PWrXc1ZNf0lmz0PL6wv178x0hkJ0D3ilXT6KG3BOTwprhgZ4eZ6nyEN"
+    "token": "skEGopcg490xLbtBCmC9LAsf4zPJ42utCQGW34TTBs0bS0DDrSws4E7RaFODDxmLqbAAe4ZeuzVahhDkm23Ep6ut2V5ikIWyMUKg5gK0d9H617wGrYfhhRO3PfDU5PWrXc1ZNf0lmz0PL6wv178x0hkJ0D3ilXT6KG3BOTwprhgZ4eZ6nyEN",
+    "watchMode": true
   }
 }]; // During bootstrap, we write requires at top of this file which looks like:
 // var plugins = [
