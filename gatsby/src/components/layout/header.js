@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState } from "react"
 import styled from 'styled-components'
 import { Link } from 'gatsby';
 import { useStaticQuery, graphql } from "gatsby"
@@ -23,15 +23,144 @@ const Header = ({ scroll, indexTrue }) => {
   }
   `)
 
+const [click, setClick] = useState(false);
+
+
   const logo = data.sanitySettings.mainLogo.asset.url;
   const logoCollective = data.sanitySettings.logoCollective.asset.url;
+
+
+const HeaderStyled = styled.header`
+background-color: var(--white);
+width: 100%;
+height: 60px;
+box-sizing: border-box;
+position: fixed;
+display: flex;
+flex-direction: row;
+@media (max-width: 1050px) {
+  height: ${click ? '330px' : '60px'};
+  border-bottom: ${click ? 'solid 4px black' : 'none' };
+  transition: all .75s ease-in-out;
+}
+`
+
+const Ham = styled.div`
+display: none;
+@media (max-width: 1050px) {
+  cursor: pointer;
+  display: block;
+  position: absolute;
+  top: 22px;
+  left: 20px;
+  width: 30px;
+  .line {
+    width: 100%;
+    height: 1px;
+    margin-bottom: 7px;
+    background-color: black;
+  }
+}
+`
+
+const Left = styled.ul`
+li {
+  display: inline;
+  margin-right: 20px;
+  position: absolute;
+  top: 22px;
+  cursor: pointer;
+  a {
+    font-family: var(--neue);
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    position: relative;
+    &:hover {
+      font-family: var(--gt);
+      letter-spacing: 0.2px;
+    }
+  }
+  &:nth-child(1) {
+    left: 20px;
+  }
+  &:nth-child(2) {
+    left: 85px;
+  }
+  &:nth-child(3) {
+    left: 190px;
+  }
+  &:nth-child(4) {
+    left: 325px;
+  }
+}
+@media (max-width: 1050px) {
+  display: ${click ? 'flex' : 'none' };
+  flex-direction: column;
+  text-align: center;
+  align-content: center;
+  overflow: hidden;
+  margin-top: 160px;
+  position: relative;
+  z-index: 2;
+  background-color: white;
+  width: 100%;
+  li {
+    position: static;
+    a {
+      font-size: 2rem;
+    }
+  }
+}
+`
+const Logo = styled(Link)`
+align-self: auto;
+justify-self: center;
+line-height: 0;
+#img {
+  width: 98vw;
+  margin: 0 auto;
+  position: absolute;
+  left: 50%;
+  top: 60px;
+  transform: translateX(-50%);
+  transition: all .75s ease-in-out;
+  transform: translateX(-50%);
+}
+#img.shrink {
+  transition: all .75s ease-in-out;
+  width: 200px;
+  top: 15px;
+}
+@media (max-width: 1050px) {
+  #img {
+    top: 50px;
+  }
+}
+`
+
+const LogoCollective = styled(Link)`
+img {
+  width: 160px;
+  position: absolute;
+  top: 25px;
+  right: 20px;
+}
+@media (max-width: 1050px) {
+  display: none;
+}
+`
   return (
     <HeaderStyled>
+      <Ham className='ham' onClick={() => {setClick(!click)}} >
+        <div className='line'></div>
+        <div className='line'></div>
+        <div className='line'></div>
+      </Ham>
       <Left>
-        <li><Link to=''>Vision</Link></li>
-        <li><Link to=''>Who we are</Link></li>
-        <li><Link to=''>Team & partners</Link></li>
-        <li><Link to=''>Technology</Link></li>
+        <li><a onClick={() => {setClick(!click)}} href='#vision'>Vision</a></li>
+        <li><a href='#vision'>Who we are</a></li>
+        <li><a href='#vision'>Team & partners</a></li>
+        <li><a href='#vision'>Technology</a></li>
       </Left>
       {indexTrue ?
         <Logo to='/' className="logo">
@@ -39,7 +168,7 @@ const Header = ({ scroll, indexTrue }) => {
         </Logo>
         :
         <Logo to='/' className="logo">
-          <img src={logo} alt="Jumpcut" />
+          <img id='img' src={logo} alt="Jumpcut" className='shrink' />
         </Logo>
       }
       <LogoCollective to='/'>
@@ -49,73 +178,5 @@ const Header = ({ scroll, indexTrue }) => {
     </HeaderStyled>
   )
 }
-
-const HeaderStyled = styled.header`
-  width: 100%;
-  height: 60px;
-  box-sizing: border-box;
-  position: fixed;
-  display: flex;
-  flex-direction: row;
-`
-
-const Left = styled.ul`
-  li {
-    display: inline;
-    margin-right: 20px;
-    position: absolute;
-    top: 22px;
-    a {
-      font-family: var(--neue);
-      text-transform: uppercase;
-      font-size: 0.8rem;
-      position: relative;
-      &:hover {
-        font-family: var(--gt);
-        letter-spacing: 0.2px;
-      }
-    }
-    &:nth-child(1) {
-      left: 20px;
-    }
-    &:nth-child(2) {
-      left: 85px;
-    }
-    &:nth-child(3) {
-      left: 190px;
-    }
-    &:nth-child(4) {
-      left: 325px;
-    }
-  }
-`
-const Logo = styled(Link)`
-  align-self: auto;
-  justify-self: center;
-  line-height: 0;
-  #img {
-    width: 98vw;
-    margin: 0 auto;
-    position: absolute;
-    left: 50%;
-    top: 60px;
-    transform: translateX(-50%);
-    transition: all .75s ease-in-out;
-    transform: translateX(-50%);
-  }
-  #img.shrink {
-    width: 200px;
-    top: 30px;
-  }
-`
-
-const LogoCollective = styled(Link)`
-  img {
-    width: 80px;
-    position: absolute;
-    top: 30px;
-    right: 20px;
-  }
-`
 
 export default Header

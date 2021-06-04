@@ -77,4 +77,12 @@ export const Typography = createGlobalStyle`
     --white: #ffffff;
 }
 
+h1 {
+    font-size: 7.4vw;
+    font-family: var(--ric);
+    font-weight: normal;
+    @media (max-width: 780px) {
+        font-size: 2.5rem;
+    }
+}
 `

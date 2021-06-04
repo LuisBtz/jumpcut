@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react"
 import Layout from "../components/layout/layout"
 import Seo from "../components/layout/seo"
 import styled from 'styled-components'
+import Vision from '../components/home/Vision'
 
 const IndexPage = () => {
   const indexTrue = true;
@@ -18,15 +19,17 @@ const IndexPage = () => {
   <Layout scroll={scroll} indexTrue={indexTrue}>
     <Seo title="Home" />
     <Contenedor>
-      <h1>Home</h1>
+      <Vision />
     </Contenedor>
   </Layout>
   )
 }
 
 const Contenedor = styled.div`
-height: 200vh;
-padding-top: 350px;
+padding-top: 22vw;
+@media (max-width: 650px) {
+  padding-top: 28vw;
+}
 `
 
 export default IndexPage
