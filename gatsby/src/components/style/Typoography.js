@@ -77,6 +77,19 @@ export const Typography = createGlobalStyle`
     --white: #ffffff;
 }
 
+p {
+    font-size: 1.2rem;
+    @media (max-width: 1050px) {
+        font-size: 1rem;
+    } 
+}
+
+em {
+    font-family: var(--ricIta);
+    font-weight: normal;
+    font-style: normal;
+}
+
 h1 {
     font-size: 7.4vw;
     font-family: var(--ric);
@@ -85,4 +98,22 @@ h1 {
         font-size: 2.5rem;
     }
 }
+
+h2 {
+        font-size: 2.5rem;
+        font-family: var(--ric) ;
+        font-weight: normal;
+    @media (max-width: 1250px) {
+        font-size: 1.5rem;
+    } 
+    }
+h3 {
+    font-size: 7.4vw;
+    font-family: var(--ric);
+    font-weight: normal;
+    @media (max-width: 780px) {
+        font-size: 2.5rem;
+    }
+}
+
 `

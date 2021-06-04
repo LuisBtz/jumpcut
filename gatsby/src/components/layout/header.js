@@ -13,11 +13,13 @@ const Header = ({ scroll, indexTrue }) => {
         asset {
           url
         }
+        alt
       }
       logoCollective {
         asset {
           url
         }
+        alt
       }
     }
   }
@@ -113,21 +115,16 @@ li {
 }
 `
 const Logo = styled(Link)`
-align-self: auto;
-justify-self: center;
-line-height: 0;
 #img {
   width: 98vw;
   margin: 0 auto;
-  position: absolute;
+  position: fixed;
   left: 50%;
   top: 60px;
   transform: translateX(-50%);
   transition: all .75s ease-in-out;
-  transform: translateX(-50%);
 }
 #img.shrink {
-  transition: all .75s ease-in-out;
   width: 200px;
   top: 15px;
 }
@@ -158,21 +155,21 @@ img {
       </Ham>
       <Left>
         <li><a onClick={() => {setClick(!click)}} href='#vision'>Vision</a></li>
-        <li><a href='#vision'>Who we are</a></li>
-        <li><a href='#vision'>Team & partners</a></li>
-        <li><a href='#vision'>Technology</a></li>
+        <li><a onClick={() => {setClick(!click)}} href='#wwa'>Who we are</a></li>
+        <li><a onClick={() => {setClick(!click)}} href='#vision'>Team & partners</a></li>
+        <li><a onClick={() => {setClick(!click)}} href='#vision'>Technology</a></li>
       </Left>
       {indexTrue ?
         <Logo to='/' className="logo">
-          <img id='img' src={logo} alt="Jumpcut" className={scroll ? 'shrink' : ''} />
+          <img id='img' src={logo} alt={data.sanitySettings.mainLogo.alt} className={scroll ? 'shrink' : ''} />
         </Logo>
         :
         <Logo to='/' className="logo">
-          <img id='img' src={logo} alt="Jumpcut" className='shrink' />
+          <img id='img' src={logo} alt={data.sanitySettings.mainLogo.alt} className='shrink' />
         </Logo>
       }
       <LogoCollective to='/'>
-        <img src={logoCollective} alt="Jumpcut" />
+        <img src={logoCollective} alt={data.sanitySettings.logoCollective.alt} />
       </LogoCollective>
       
     </HeaderStyled>

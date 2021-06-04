@@ -3,6 +3,7 @@ import Layout from "../components/layout/layout"
 import Seo from "../components/layout/seo"
 import styled from 'styled-components'
 import Vision from '../components/home/Vision'
+import Wwa from '../components/home/Wwa'
 
 const IndexPage = () => {
   const indexTrue = true;
@@ -20,6 +21,7 @@ const IndexPage = () => {
     <Seo title="Home" />
     <Contenedor>
       <Vision />
+      <Wwa />
     </Contenedor>
   </Layout>
   )

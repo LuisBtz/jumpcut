@@ -6,6 +6,11 @@ export default {
         {
             name: 'text',
             type: 'blockContent'
+        },
+        {
+            name: 'bottomText',
+            title: 'Bottom Text',
+            type: 'text'
         }
     ]
 }
