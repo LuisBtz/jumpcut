@@ -91,7 +91,7 @@ em {
 }
 
 h1 {
-    font-size: 7.4vw;
+    font-size: 8.1vw;
     font-family: var(--ric);
     font-weight: normal;
     @media (max-width: 780px) {

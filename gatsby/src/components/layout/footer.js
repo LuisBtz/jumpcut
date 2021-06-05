@@ -1,6 +1,6 @@
 import React from "react"
 import styled from 'styled-components'
-import { useStaticQuery, graphql } from "gatsby"
+import { useStaticQuery, graphql, Link } from "gatsby"
 
 const Footer = () => {
 
@@ -89,7 +89,9 @@ const Footer = () => {
             )
         })}
       </SocialNetworks>
-      <img src={logoCollective} alt={data.sanitySettings.logoCollectiveWhite.alt} />
+        <Link to='/jumpcutCollective'>
+          <img src={logoCollective} alt={data.sanitySettings.logoCollectiveWhite.alt} />
+        </Link>
       </Pack>
       
     </FooterContainer>

@@ -169,7 +169,7 @@ img {
           <img id='img' src={logo} alt={data.sanitySettings.mainLogo.alt} className='shrink' />
         </Logo>
       }
-      <LogoCollective to='/'>
+      <LogoCollective to='/jumpcutCollective'>
         <img src={logoCollective} alt={data.sanitySettings.logoCollective.alt} />
       </LogoCollective>
       
