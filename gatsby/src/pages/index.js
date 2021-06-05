@@ -4,6 +4,9 @@ import Seo from "../components/layout/seo"
 import styled from 'styled-components'
 import Vision from '../components/home/Vision'
 import Wwa from '../components/home/Wwa'
+import Team from "../components/home/Team"
+import WhoWeWork from "../components/home/WhoWeWork"
+import Tech from "../components/home/Tech"
 
 const IndexPage = () => {
   const indexTrue = true;
@@ -22,6 +25,9 @@ const IndexPage = () => {
     <Contenedor>
       <Vision />
       <Wwa />
+      <Team />
+      <WhoWeWork/>
+      <Tech />
     </Contenedor>
   </Layout>
   )

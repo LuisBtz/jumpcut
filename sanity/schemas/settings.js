@@ -21,6 +21,11 @@ export default {
             type: 'imageObject'
         },
         {
+            name: 'logoCollectiveWhite',
+            title: 'Logo Jumpcut Collective White',
+            type: 'imageObject'
+        },
+        {
             name: 'copyright',
             title: 'Copyright',
             type: 'string',

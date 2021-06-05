@@ -22,16 +22,6 @@ export default {
             name: 'color',
             title: 'Hex Color',
             type: 'string',
-        },
-        {
-            name: 'image',
-            title: 'Title',
-            type: 'imageObject',
-        },
-        {
-            name: 'text',
-            title: 'Text',
-            type: 'blockContent'
         }
     ]
 }

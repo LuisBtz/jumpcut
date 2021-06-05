@@ -38,6 +38,7 @@ width: 100%;
 height: 60px;
 box-sizing: border-box;
 position: fixed;
+z-index: 1;
 display: flex;
 flex-direction: row;
 @media (max-width: 1050px) {
@@ -156,8 +157,8 @@ img {
       <Left>
         <li><a onClick={() => {setClick(!click)}} href='#vision'>Vision</a></li>
         <li><a onClick={() => {setClick(!click)}} href='#wwa'>Who we are</a></li>
-        <li><a onClick={() => {setClick(!click)}} href='#vision'>Team & partners</a></li>
-        <li><a onClick={() => {setClick(!click)}} href='#vision'>Technology</a></li>
+        <li><a onClick={() => {setClick(!click)}} href='#team'>Team & partners</a></li>
+        <li><a onClick={() => {setClick(!click)}} href='#tech'>Technology</a></li>
       </Left>
       {indexTrue ?
         <Logo to='/' className="logo">

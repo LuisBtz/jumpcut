@@ -65,6 +65,12 @@ export default {
             type: 'technologyComponent',
         },
         {
+            name: 'text',
+            title: 'Repeatable Text',
+            type: 'array',
+            of: [{type: 'blockContentObject'}]
+        },
+        {
             name: 'seo',
             type: 'seo',
         }

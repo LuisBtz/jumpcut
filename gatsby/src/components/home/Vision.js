@@ -1,5 +1,5 @@
 import React from 'react'
-import { graphql, useStaticQuery, Link } from 'gatsby'
+import { graphql, useStaticQuery } from 'gatsby'
 import styled from 'styled-components'
 import BlockContent from '@sanity/block-content-to-react';
 
@@ -236,7 +236,7 @@ a {
                         })}
                     </div>
 
-                    <a href='#' >{data.sanityHome.visionBox4.bottomText}</a>
+                    <a href='#who' >{data.sanityHome.visionBox4.bottomText}</a>
                 </Box4>
             </Boxes>
         </VisionContainer>

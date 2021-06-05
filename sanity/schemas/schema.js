@@ -24,6 +24,7 @@ import heroCollective from './collective/heroCollective'
 import heroCollective2 from './collective/heroCollective2'
 import member from './collective/member'
 import social from './settings/social'
+import blockContentObject from './objects/blockContentObject'
 
 
 // Pages
@@ -59,6 +60,7 @@ export default createSchema({
     heroCollective2,
     member,
     social,
+    blockContentObject,
     // pages
     home,
     collective,
