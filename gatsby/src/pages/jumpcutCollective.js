@@ -3,6 +3,7 @@ import Layout from "../components/layout/layout"
 import Seo from "../components/layout/seo"
 import styled from 'styled-components'
 import Hero1 from "../components/collective/Hero1"
+import Hero2 from "../components/collective/Hero2"
 
 const IndexPage = () => {
   const indexTrue = false;
@@ -14,6 +15,7 @@ const IndexPage = () => {
     <Seo title="Home" />
     <Contenedor>
         <Hero1 />
+        <Hero2 />
     </Contenedor>
   </Layout>
   )
