@@ -4,6 +4,7 @@ import Seo from "../components/layout/seo"
 import styled from 'styled-components'
 import Hero1 from "../components/collective/Hero1"
 import Hero2 from "../components/collective/Hero2"
+import Members from "../components/collective/Members"
 
 const IndexPage = () => {
   const indexTrue = false;
@@ -16,6 +17,7 @@ const IndexPage = () => {
     <Contenedor>
         <Hero1 />
         <Hero2 />
+        <Members />
     </Contenedor>
   </Layout>
   )
