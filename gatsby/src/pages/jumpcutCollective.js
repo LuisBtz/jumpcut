@@ -7,10 +7,6 @@ import Hero2 from "../components/collective/Hero2"
 import Members from "../components/collective/Members"
 
 const IndexPage = () => {
-  const indexTrue = false;
-
-
-
   return(
   <Layout >
     <Seo title="Home" />
