@@ -7,6 +7,7 @@ import Wwa from '../components/home/Wwa'
 import Team from "../components/home/Team"
 import WhoWeWork from "../components/home/WhoWeWork"
 import Tech from "../components/home/Tech"
+import Newsletter from "../components/layout/newsletter"
 
 const IndexPage = () => {
   const indexTrue = true;
@@ -28,6 +29,7 @@ const IndexPage = () => {
       <Team />
       <WhoWeWork/>
       <Tech />
+      <Newsletter />
     </Contenedor>
   </Layout>
   )
